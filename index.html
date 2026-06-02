@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>WeatherAwake</title>
+    </head>
+    <body>
+        <h1>WeatherAwake</h1>
+        <search>
+            <form id="searchForm">
+                <label for="siteSearch">Search cities:</label>
+                <input
+                    type="search"
+                    id="siteSearch"
+                    placeholder="Where are you?"
+                    autocomplete="off"
+                />
+                <button type="submit">Search</button>
+            </form>
+        </search>
+        <data>
+            <p><span id="location"></span></p>
+            <p><span id="temperature"></span></p>
+            <p><span id="weather condition"></span></p>
+        </data>
+        <img id="weather icon" />
+        <script type="module" src="index.js"></script>
+    </body>
+</html>
