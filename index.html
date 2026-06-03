@@ -2,15 +2,16 @@
 <html>
     <head>
         <title>WeatherAwake</title>
+        <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
     </head>
     <body>
         <h1>WeatherAwake</h1>
         <search>
             <form id="searchForm">
-                <label for="siteSearch">Search cities:</label>
+                <label for="citySearch">Search cities:</label>
                 <input
                     type="search"
-                    id="siteSearch"
+                    id="citySearch"
                     placeholder="Where are you?"
                     autocomplete="off"
                 />
@@ -18,11 +19,11 @@
             </form>
         </search>
         <data>
-            <p><span id="location"></span></p>
-            <p><span id="temperature"></span></p>
-            <p><span id="weather condition"></span></p>
+            <p><span id="location">City</span></p>
+            <p><span id="temperature">Degrees</span></p>
+            <p><span id="weatherCondition">Condition</span></p>
         </data>
-        <img id="weather icon" />
+        <img id="weatherIcon" />
         <script type="module" src="index.js"></script>
     </body>
 </html>

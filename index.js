@@ -1,24 +1,37 @@
-import { config } from "dotenv";
-config();
+//const apiKey = env.API_KEY;
+const apiKey = "";
 
-async function getWeather() {
-  const apiKey = process.env.API_KEY;
-  console.log(apiKey);
+const url = "https://api.openweathermap.org/data/2.5/weather?q=";
 
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("searchForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    onSearchCity();
+  });
+});
+
+function onSearchCity() {
+  const city = document.getElementById("citySearch").value;
+  //console.log(city);
+  document.getElementById("location").textContent = `${city.toUpperCase()}`;
+  getWeather(city);
+}
+
+async function getWeather(city) {
   if (!apiKey) {
     throw new Error("API key not found");
   }
-  const location = document.getElementById("location").value;
-  const url = "https://api.openweathermap.org/data/2.5/weather?q=";
+
   try {
     const response = await fetch(
-      `${url}${encodeURIComponent(location)}&appid=${apiKey}`,
+      `${url}${encodeURIComponent(city)}&appid=${apiKey}&units=metric`,
     );
     const data = await response.json();
-    document.getElementById("weather condition").textContent =
+    document.getElementById("temperature").textContent = data.main.temp;
+    document.getElementById("weatherCondition").textContent =
       data.weather[0].description;
   } catch (error) {
-    document.getElementById("weather condition").textContent =
+    document.getElementById("weatherCondition").textContent =
       "Error fetching weather data";
   }
 }
