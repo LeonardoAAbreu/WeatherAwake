@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function onSearchCity() {
   const city = document.getElementById("citySearch").value;
+  document.getElementById("citySearch").value = "";
   //console.log(city);
   document.getElementById("location").textContent = `${city.toUpperCase()}`;
   getWeather(city);
