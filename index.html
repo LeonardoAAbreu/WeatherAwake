@@ -9,7 +9,6 @@
         <h1>WeatherAwake</h1>
         <search>
             <form id="searchForm">
-                <label for="citySearch">Search cities:</label>
                 <input
                     type="search"
                     id="citySearch"
@@ -19,11 +18,15 @@
                 <button type="submit">Search</button>
             </form>
         </search>
-        <data>
-            <p><span id="location">City</span></p>
-            <p><span id="temperature">Degrees</span></p>
-            <p><span id="weatherCondition">Condition</span></p>
-        </data>
+        <div>
+            <data>
+                <p class="city"><span id="location"></span></p>
+                <p class="temp"><span id="temperature"></span></p>
+                <p class="weather">
+                    <span id="weatherCondition"></span>
+                </p>
+            </data>
+        </div>
         <img id="weatherIcon" />
         <script type="module" src="index.js"></script>
     </body>

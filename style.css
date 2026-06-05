@@ -1,5 +1,63 @@
 body {
     background-color: #1f1f1f;
     font-family: Arial, sans-serif;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    min-height: 155px;
+    margin: auto;
+    align-items: center;
+    padding-inline: 0;
+    padding: 3rem;
+    border-radius: 2rem;
+    background-color: #2020a8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+}
+
+search {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 1rem;
+}
+
+data {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+}
+
+p {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+p.city {
+    color: #0f0f0f;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+}
+
+p.temp {
     color: #f0f0f0;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+}
+
+p.weather {
+    color: #a0a0a0;
+    font-size: 1rem;
+    font-family: "Courier New", Courier, monospace;
 }
